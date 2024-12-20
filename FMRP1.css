@@ -1,0 +1,380 @@
+ /* Reset and base styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layer management */
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Background image container */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://i.imghippo.com/files/alS3621CaY.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Particles container */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* Header styling */
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+
+/* Overlay and Modal Base Styles */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.623);
+    z-index: 1000;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 1100;
+    overflow: auto;
+    padding: 20px;
+}
+
+
+.overlay-content {
+    background: rgba(0, 0, 0, 0.856);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+.modal-content {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 10%;
+    position: relative;
+    top: 15%;
+}
+
+
+
+/* Ad Support Overlay Styles */
+.overlay-content h1 {
+    color: yellow;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ad-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 20px 0;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.ad-button:hover {
+    background-color: darkred;
+}
+
+.instructions {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.instructions h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    margin: 10px 0;
+    color: #f0f0f0;
+}
+
+.footer-note {
+    color: limegreen;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Retry Modal Styles */
+.modal-content h1 {
+    color: red;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.message {
+    color: yellow;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    border: 5px solid #999;
+    border-top: 5px solid red;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.reopen-btn,
+.reload {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.reload {
+    background-color: #555;
+}
+
+.reopen-btn:hover,
+.reload:hover {
+    background-color: darkred;
+}
+
+
+
+
+/* Main content container */
+.main-content {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    overflow-x: hidden;
+    z-index: 3;
+}
+
+
+.content {
+    text-align: center;
+    margin-bottom: 40px;
+    background: #2f222362;
+    border-radius: 10px;
+}
+
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+   
+    background: #000000ad;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: calc(50% - 20px);
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 100%;
+}
+
+.card-title {
+    color: white;
+    font-size: 1.5rem;
+    margin: 15px 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-text {
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+
+.card .join-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card .join-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    transform: scale(1.05);
+}
+
+.card .join-btn i {
+    font-size: 30px;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        margin: 12px 0 8px 0;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .overlay-content,
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .ad-button,
+    .reopen-btn,
+    .reload {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 150px;
+    }
+
+    .content h1 {
+        font-size: 1.3rem;
+    }
+
+    .card .join-btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .card .join-btn i {
+        font-size: 25px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        margin: 10px 0 6px 0;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+}
